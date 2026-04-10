@@ -2,6 +2,69 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/edisplay/babel-plugin-istanbul/compare/v8.0.2...v9.0.0) (2026-04-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **deps:** update to latest version of test-exclude ([#301](https://github.com/edisplay/babel-plugin-istanbul/issues/301))
+* Drop support for Node versions 8 and 10
+* Drop node.js 6 ([#226](https://github.com/edisplay/babel-plugin-istanbul/issues/226))
+* Drop node 4 support, upgrade to babel 7, stop shipping @babel/plugin-syntax-object-rest-spread
+* I've updated dependencies and dropped Node 0.10 and Node 0.12 support.
+* **package:** test-exclude now adds `**/node_modules/**` as exclude rule by default.
+* see https://github.com/istanbuljs/test-exclude/blob/master/CHANGELOG.md#breaking-changes
+
+### Features
+
+* accept source map input for the visitor ([#75](https://github.com/edisplay/babel-plugin-istanbul/issues/75)) ([437e90b](https://github.com/edisplay/babel-plugin-istanbul/commit/437e90b54aae96847d3c80fe35b0e2b498c42c61))
+* add includeUntested option to expose coverage of all instrumented files ([#80](https://github.com/edisplay/babel-plugin-istanbul/issues/80)) ([b078bbd](https://github.com/edisplay/babel-plugin-istanbul/commit/b078bbd56ff5ead3dc3103c70b6d2728dd1c7671))
+* Add support for instrumenter options ([#227](https://github.com/edisplay/babel-plugin-istanbul/issues/227)) ([fe08f5b](https://github.com/edisplay/babel-plugin-istanbul/commit/fe08f5b8282136c7ed9375fa32148586bd6a7e28))
+* allow exclude/include options to be passed as Babel plugin config ([#16](https://github.com/edisplay/babel-plugin-istanbul/issues/16)) ([cf68421](https://github.com/edisplay/babel-plugin-istanbul/commit/cf684219a76045d75d0d31a6634763f0e9a171af))
+* Bump dependencies. ([b509649](https://github.com/edisplay/babel-plugin-istanbul/commit/b509649738217e1e33c5a677603e1c880c1929d7))
+* **ci/cd:** switch to `npm` trusted publishing ([78d7e8c](https://github.com/edisplay/babel-plugin-istanbul/commit/78d7e8c4ccbcee58d606196da665279f699d2241))
+* **deps:** update to latest version of test-exclude ([#301](https://github.com/edisplay/babel-plugin-istanbul/issues/301)) ([fb1d78c](https://github.com/edisplay/babel-plugin-istanbul/commit/fb1d78c5c7b494511b0666f1a9ed14d73a57d818))
+* drop Node 0.10 and 0.12 support, upgrade dependencies to reflect this ([#88](https://github.com/edisplay/babel-plugin-istanbul/issues/88)) ([594c03a](https://github.com/edisplay/babel-plugin-istanbul/commit/594c03a884afdc4f5981969668881a5464299ade))
+* Drop node.js 6 ([#226](https://github.com/edisplay/babel-plugin-istanbul/issues/226)) ([93db21a](https://github.com/edisplay/babel-plugin-istanbul/commit/93db21aa2bbdbb06fb784f52c24a7847fad6be92)), closes [#209](https://github.com/edisplay/babel-plugin-istanbul/issues/209)
+* **instrumenter:** instrumenter with fixes for branchMap instrumentation ([#265](https://github.com/edisplay/babel-plugin-istanbul/issues/265)) ([1e9ec62](https://github.com/edisplay/babel-plugin-istanbul/commit/1e9ec62b50c9d2224e7bb0ccb071fd10b80e018f))
+* port functionality from __coverage__, get ready for first release ([#2](https://github.com/edisplay/babel-plugin-istanbul/issues/2)) ([2a8ee44](https://github.com/edisplay/babel-plugin-istanbul/commit/2a8ee44bcd36bf04dc3841e2dd95c8f8fcf563f0))
+* Support turning off node_modules default exclude via flag ([#172](https://github.com/edisplay/babel-plugin-istanbul/issues/172)) ([a314f06](https://github.com/edisplay/babel-plugin-istanbul/commit/a314f06c0f3793520b00399dd91f428bb3448e3f))
+* upgrade to babel 7 and newest istanbul libraries ([#158](https://github.com/edisplay/babel-plugin-istanbul/issues/158)) ([a9e1564](https://github.com/edisplay/babel-plugin-istanbul/commit/a9e15643d249a2985e4387e4308022053b2cd0ad))
+* we can now use the language feature Object.assign ([#92](https://github.com/edisplay/babel-plugin-istanbul/issues/92)) ([f77db2a](https://github.com/edisplay/babel-plugin-istanbul/commit/f77db2a9d3cfc345b72ecd7cc38e04a011c19be9))
+
+
+### Bug Fixes
+
+* Add support for Babel 8 ([#304](https://github.com/edisplay/babel-plugin-istanbul/issues/304)) ([f298957](https://github.com/edisplay/babel-plugin-istanbul/commit/f298957935b975042d09f86986ad9c4a6a3e529e))
+* address regression related to export const foo = () =&gt; {} ([#79](https://github.com/edisplay/babel-plugin-istanbul/issues/79)) ([f870a8f](https://github.com/edisplay/babel-plugin-istanbul/commit/f870a8f67b2d04f156fd1b91bc1faab54915ef71))
+* babel-preset-es2015 =&gt; babel-preset-env ([#138](https://github.com/edisplay/babel-plugin-istanbul/issues/138)) ([18fe954](https://github.com/edisplay/babel-plugin-istanbul/commit/18fe954688fb4b9450138bf6f471446a88573133))
+* **build:** first automated publication ([9a1b893](https://github.com/edisplay/babel-plugin-istanbul/commit/9a1b89342565d1127a011e31262520b057120531))
+* **ci:** remove release-please registry url ([#319](https://github.com/edisplay/babel-plugin-istanbul/issues/319)) ([478ffb6](https://github.com/edisplay/babel-plugin-istanbul/commit/478ffb61ef808686144918b73ee10122d8f6ab0c))
+* **ci:** set registry-url to npmjs for release-please ([#321](https://github.com/edisplay/babel-plugin-istanbul/issues/321)) ([a147d0e](https://github.com/edisplay/babel-plugin-istanbul/commit/a147d0e9ba16f5e1734ace18aa47c5e488349376))
+* container is falsy error with block scoping transform ([#291](https://github.com/edisplay/babel-plugin-istanbul/issues/291)) ([8e76919](https://github.com/edisplay/babel-plugin-istanbul/commit/8e7691901986d9aed751ff28724695e0beafb2a8))
+* Ensure correct scope references after traversal ([#192](https://github.com/edisplay/babel-plugin-istanbul/issues/192)) ([201a933](https://github.com/edisplay/babel-plugin-istanbul/commit/201a93347e527ceeb887708715f58427799d85f6))
+* explicit upgrade to patched version of istanbul-lib-instrument ([db8ecbe](https://github.com/edisplay/babel-plugin-istanbul/commit/db8ecbea9319d5f2348e60f73dabda31f2318c62))
+* force istanbul-lib-instrument with variable hoisting fix ([#64](https://github.com/edisplay/babel-plugin-istanbul/issues/64)) ([209a0cf](https://github.com/edisplay/babel-plugin-istanbul/commit/209a0cfc8a1122a67e31b00fec6c703f5ee7d265))
+* include object-spread-syntax plugin ([#141](https://github.com/edisplay/babel-plugin-istanbul/issues/141)) ([428a952](https://github.com/edisplay/babel-plugin-istanbul/commit/428a952e21bbaf6ea6ee016de85d24d76b3ea12f))
+* keep using NYC_CWD if available ([#10](https://github.com/edisplay/babel-plugin-istanbul/issues/10)) ([db0352b](https://github.com/edisplay/babel-plugin-istanbul/commit/db0352bd17a43896dafe60255d419019beeb0304))
+* load configuration from process.env.NYC_CONFIG if present ([#93](https://github.com/edisplay/babel-plugin-istanbul/issues/93)) ([e902924](https://github.com/edisplay/babel-plugin-istanbul/commit/e90292485f5e0c5242b5de1366af41adea4d5641))
+* Print explicit error if use with babel 6 is attempted ([#207](https://github.com/edisplay/babel-plugin-istanbul/issues/207)) ([a12cf16](https://github.com/edisplay/babel-plugin-istanbul/commit/a12cf163acf0de6bcd07e7925f5b81bf2ce93a0d))
+* respect changes of cwd in options ([#171](https://github.com/edisplay/babel-plugin-istanbul/issues/171)) ([adec723](https://github.com/edisplay/babel-plugin-istanbul/commit/adec723abfe84824133d9005849d5645dbb4d25b))
+* switch deprecated lodash.assign for object-assign ([#58](https://github.com/edisplay/babel-plugin-istanbul/issues/58)) ([6e051fc](https://github.com/edisplay/babel-plugin-istanbul/commit/6e051fcebe2f481a55770f477244ed078b0b4563))
+* take realpath of cwd, whether or not set in env ([#37](https://github.com/edisplay/babel-plugin-istanbul/issues/37)) ([6274d83](https://github.com/edisplay/babel-plugin-istanbul/commit/6274d8307d358ac5d3da9847303dba8f90ca5c49))
+* take realpath of process.cwd(), fixes [#7](https://github.com/edisplay/babel-plugin-istanbul/issues/7) ([#8](https://github.com/edisplay/babel-plugin-istanbul/issues/8)) ([e8d3785](https://github.com/edisplay/babel-plugin-istanbul/commit/e8d3785b9fc1652dffdcf8af31c448325da90607))
+* update `istanbul-lib-instrument` to v6 ([#292](https://github.com/edisplay/babel-plugin-istanbul/issues/292)) ([643e080](https://github.com/edisplay/babel-plugin-istanbul/commit/643e0801b23f5f1f96786e70b2a08379fe909b1a))
+* update istanbul-lib-instrument ([573e0d4](https://github.com/edisplay/babel-plugin-istanbul/commit/573e0d46559c1cc27fe13b2805741034e30eef1b))
+* upgrade a bunch of core dependencies ([#77](https://github.com/edisplay/babel-plugin-istanbul/issues/77)) ([e764330](https://github.com/edisplay/babel-plugin-istanbul/commit/e764330384baa4a7dc93da12f5e8f5a6a044e3d0))
+* upgrade to istanbul-lib-instrument with faster babel-generator ([#18](https://github.com/edisplay/babel-plugin-istanbul/issues/18)) ([d33263c](https://github.com/edisplay/babel-plugin-istanbul/commit/d33263c142419f14293c87dd3a246249cc1e6565))
+* upgrade to version of istanbul-lib-instrument that fixes some out of bounds issues ([#6](https://github.com/edisplay/babel-plugin-istanbul/issues/6)) ([a949065](https://github.com/edisplay/babel-plugin-istanbul/commit/a949065763c4e5e885377ba66e91ee76b535df96))
+
+
+### Miscellaneous Chores
+
+* **package:** update test-exclude to version 3.0.0 ([#68](https://github.com/edisplay/babel-plugin-istanbul/issues/68)) ([0396385](https://github.com/edisplay/babel-plugin-istanbul/commit/03963859bae82eeb664ad254d0c52d789d8dd82c))
+* upgrade to version of test-exclude with new exclude rules ([#35](https://github.com/edisplay/babel-plugin-istanbul/issues/35)) ([220ce2b](https://github.com/edisplay/babel-plugin-istanbul/commit/220ce2b6903c71088550d83b9851a4cd2fb02713))
+
 ## [8.0.2](https://github.com/istanbuljs/babel-plugin-istanbul/compare/v8.0.1...v8.0.2) (2025-09-25)
 
 
